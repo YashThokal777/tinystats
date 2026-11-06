@@ -3,6 +3,8 @@
 
 def mean(values):
     """The arithmetic mean of a list of numbers."""
+    if not values:
+        raise ValueError("mean requires at least one data point")
     return sum(values) / len(values)
 
 

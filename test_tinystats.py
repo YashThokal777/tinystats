@@ -1,8 +1,14 @@
 from tinystats import mean, median
+import pytest
 
 
 def test_mean():
     assert mean([1, 2, 3]) == 2
+
+
+def test_mean_empty():
+    with pytest.raises(ValueError, match="at least one data point"):
+        mean([])
 
 
 def test_median_odd():
