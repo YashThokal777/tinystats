@@ -11,3 +11,9 @@ def test_median_odd():
 
 def test_median_even():
     assert median([4, 1, 3, 2]) == 2.5
+
+
+def test_mean_empty():
+    import pytest
+    with pytest.raises(ValueError):
+        mean([])
