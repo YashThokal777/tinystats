@@ -1,3 +1,5 @@
+import pytest
+
 from tinystats import mean, median
 
 
@@ -11,3 +13,9 @@ def test_median_odd():
 
 def test_median_even():
     assert median([4, 1, 3, 2]) == 2.5
+
+
+
+def test_median_empty():
+    with pytest.raises(ValueError):
+        median([])

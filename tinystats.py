@@ -8,6 +8,8 @@ def mean(values):
 
 def median(values):
     """The middle value of a list of numbers."""
+    if not values:
+        raise ValueError("median() of an empty list")
     ordered = sorted(values)
     mid = len(ordered) // 2
     if len(ordered) % 2:
